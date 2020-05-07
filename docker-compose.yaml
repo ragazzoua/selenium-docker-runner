@@ -26,7 +26,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
     volumes:
-      - ./output/search-result:/usr/share/udemy/test-output
+      - /d/jenkins/output/search-result:/usr/share/udemy/test-output
   book-flight-module:
     image: ragazzoua/selenium-docker
     depends_on:
