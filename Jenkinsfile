@@ -19,9 +19,9 @@ pipeline{
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: '/d/docker_new/**'
+			archiveArtifacts artifacts: 'output/**'
 			bat "docker-compose down"
-			bat "sudo rm -rf /d/docker_new/"
+			bat "rmdir /s /q %WORKSPACE%\\output"
 		}
 	}
 }
